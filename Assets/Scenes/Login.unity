@@ -495,7 +495,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 364.4, y: 33.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &383453821
 MonoBehaviour:
@@ -1145,7 +1145,6 @@ GameObject:
   - component: {fileID: 1706170699}
   - component: {fileID: 1706170698}
   - component: {fileID: 1706170697}
-  - component: {fileID: 1706170696}
   - component: {fileID: 1706170695}
   m_Layer: 0
   m_Name: Login
@@ -1183,26 +1182,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1706170693}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18853b2b1bfd89242b883cd2bc1dd465, type: 3}
+  m_Script: {fileID: 11500000, guid: d74cf3af782b7b64db6270899f0702d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messageText: {fileID: 0}
-  emailInput: {fileID: 0}
-  passInput: {fileID: 0}
---- !u!114 &1706170696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1706170693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28e4edc96f46614439262cadaacd4869, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  user: {fileID: 0}
-  pass: {fileID: 0}
+  userInput: {fileID: 1124122213}
+  passInput: {fileID: 1223216705}
 --- !u!114 &1706170697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1248,8 +1232,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1706170695}
-        m_TargetAssemblyTypeName: PlayfabManager, Assembly-CSharp
-        m_MethodName: Login
+        m_TargetAssemblyTypeName: GetInputData, Assembly-CSharp
+        m_MethodName: getLoginUserData
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1346,11 +1330,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1772331005}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18853b2b1bfd89242b883cd2bc1dd465, type: 3}
+  m_Script: {fileID: 11500000, guid: d74cf3af782b7b64db6270899f0702d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messageText: {fileID: 383453821}
-  emailInput: {fileID: 1124122213}
+  userInput: {fileID: 1124122213}
   passInput: {fileID: 1223216705}
 --- !u!114 &1772331008
 MonoBehaviour:
@@ -1397,8 +1380,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1772331007}
-        m_TargetAssemblyTypeName: PlayfabManager, Assembly-CSharp
-        m_MethodName: RegisterButton
+        m_TargetAssemblyTypeName: GetInputData, Assembly-CSharp
+        m_MethodName: getRegisterUserData
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1632,3 +1615,64 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2071976032}
   m_CullTransparentMesh: 1
+--- !u!1001 &7863071846371651610
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7863071847066136152, guid: fc3be22006497f54b8ba32b02e95d6c9, type: 3}
+      propertyPath: m_Name
+      value: DataManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7863071847066136153, guid: fc3be22006497f54b8ba32b02e95d6c9, type: 3}
+      propertyPath: messageText
+      value: 
+      objectReference: {fileID: 383453821}
+    - target: {fileID: 7863071847066136158, guid: fc3be22006497f54b8ba32b02e95d6c9, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7863071847066136158, guid: fc3be22006497f54b8ba32b02e95d6c9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7863071847066136158, guid: fc3be22006497f54b8ba32b02e95d6c9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7863071847066136158, guid: fc3be22006497f54b8ba32b02e95d6c9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7863071847066136158, guid: fc3be22006497f54b8ba32b02e95d6c9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7863071847066136158, guid: fc3be22006497f54b8ba32b02e95d6c9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7863071847066136158, guid: fc3be22006497f54b8ba32b02e95d6c9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7863071847066136158, guid: fc3be22006497f54b8ba32b02e95d6c9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7863071847066136158, guid: fc3be22006497f54b8ba32b02e95d6c9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7863071847066136158, guid: fc3be22006497f54b8ba32b02e95d6c9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7863071847066136158, guid: fc3be22006497f54b8ba32b02e95d6c9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fc3be22006497f54b8ba32b02e95d6c9, type: 3}
